@@ -1,0 +1,5 @@
+Repaso de como leer 
+archivos con python.
+manipular archivos nos permite persistir los resultados
+Creando programas que guarden la informacion que van 
+generando 
