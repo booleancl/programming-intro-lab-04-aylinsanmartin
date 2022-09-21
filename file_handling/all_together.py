@@ -2,7 +2,18 @@
 print("Bienvenidos al programa")
 user_input = ""
 
-while user_input != "exit":
+def write_file():
+    file =open("file_handling/demo_two.txt","a")
+    user_content = input("Ingresa el contendido\n")
+    file.write(user_content + "\n")
+    file.close()
+
+def read_file():
+    file = open("file_handling/demo_two.txt", "r")
+    for line in file:
+        print(line)
+
+def print_menu():
     print("#################")
     print("Ingresa una opcion")
     print("1", "agregar contenido")
@@ -10,18 +21,20 @@ while user_input != "exit":
     print("exit", "para salir")
     print("##################")
 
+
+
+while user_input != "exit":
+    print_menu()
     user_input = input()
 
     if user_input == "1":
-        file =open("demo_two.txt","a")
-        user_content = input("Ingresa el contendido\n")
-        file_write(user_content + "\n")
-        file.close()
+        write_file()
     elif user_input == "2":
-        file = open("demo_two.txt", "r")
-        for line in file:
-            print(line)
+        read_file()
+    elif user_input == "exit":
+        print("chau chau")
+        exit()
     else:
         print("opcion incorrecta")
 
-print("chau chau") 
+ 
